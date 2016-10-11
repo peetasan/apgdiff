@@ -249,7 +249,7 @@ public class AlterRelationParser {
                 }
 
                 column.setStatistics(parser.parseInteger());
-            } else if (parser.expectOptional("DEFAULT")) {
+            } else if (parser.expectOptional("DEFAULT") || parser.expectOptional("NOT NULL")) {
                 final String defaultValue = parser.getExpression();
 
                 if (rel.containsColumn(columnName)) {

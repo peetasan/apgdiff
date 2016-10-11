@@ -321,10 +321,10 @@ public final class Parser {
         final int endPos = getExpressionEnd();
 
         if (position == endPos) {
-            throw new ParserException(MessageFormat.format(
-                    Resources.getString("CannotParseStringExpectedExpression"),
-                    string, position + 1,
-                    string.substring(position, position + 20)));
+//            throw new ParserException(MessageFormat.format(
+//                    Resources.getString("CannotParseStringExpectedExpression"),
+//                    string, position + 1,
+//                    string.substring(position, position + 20)));
         }
 
         final String result = string.substring(position, endPos).trim();
